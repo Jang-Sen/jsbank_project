@@ -19,10 +19,10 @@ services:
     container_name: js_backend
     build:
       dockerfile: Dockerfile
-      context: .
+      context: backend
       target: development
     volumes:
-      - .:/usr/src/app
+      - ./backend:/usr/src/app
     ports:
       - ${BACKEND_PORT}:${BACKEND_PORT}
     command: npm run start:dev
